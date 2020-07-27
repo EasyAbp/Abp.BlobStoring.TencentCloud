@@ -2,6 +2,9 @@ namespace EasyAbp.Abp.BlobStoring.TencentCloud
 {
     public static class TencentCloudBlobProviderConfigurationNames
     {
+        public const string ContainerName = "TencentCloud.ContainerName";
+        public const string CreateContainerIfNotExists = "TencentCloud.CreateContainerIfNotExists";
+
         public const string AppId = "TencntCloud.AppId";
         public const string SecretId = "TencentCloud.SecretId";
         public const string SecretKey = "TencentCloud.SecretKey";

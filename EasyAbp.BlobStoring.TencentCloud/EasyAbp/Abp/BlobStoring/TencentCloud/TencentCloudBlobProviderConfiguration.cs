@@ -47,6 +47,18 @@ namespace EasyAbp.Abp.BlobStoring.TencentCloud
             set => _containerConfiguration.SetConfiguration(TencentCloudBlobProviderConfigurationNames.KeyDurationSecond, value);
         }
 
+        public string ContainerName
+        {
+            get => _containerConfiguration.GetConfigurationOrDefault<string>(TencentCloudBlobProviderConfigurationNames.ContainerName);
+            set => _containerConfiguration.SetConfiguration(TencentCloudBlobProviderConfigurationNames.ContainerName, value);
+        }
+
+        public bool CreateContainerIfNotExists
+        {
+            get => _containerConfiguration.GetConfigurationOrDefault<bool>(TencentCloudBlobProviderConfigurationNames.CreateContainerIfNotExists);
+            set => _containerConfiguration.SetConfiguration(TencentCloudBlobProviderConfigurationNames.CreateContainerIfNotExists, value);
+        }
+
         private readonly BlobContainerConfiguration _containerConfiguration;
 
         public TencentCloudBlobProviderConfiguration(BlobContainerConfiguration containerConfiguration)
