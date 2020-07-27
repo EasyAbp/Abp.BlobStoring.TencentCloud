@@ -29,7 +29,7 @@ namespace EasyAbp.BlobStoring.TencentCloud.Tests
         }
 
         [Fact]
-        public async Task Should_Return_True()
+        public async Task File_Should_Exists()
         {
             // Arrange
             var bytes = new byte[] {0x01, 0x02};
@@ -40,6 +40,23 @@ namespace EasyAbp.BlobStoring.TencentCloud.Tests
             // Assert
             var isExists = await _blobContainer.ExistsAsync("TestFile2");
             isExists.ShouldBe(true);
+        }
+
+        [Fact]
+        public async Task File_Should_Deleted()
+        {
+            // Arrange
+            var bytes = new byte[] {0x01, 0x02};
+
+            // Act
+            await _blobContainer.SaveAsync("TestFile3", bytes);
+
+            // Assert
+            var response = await _blobContainer.DeleteAsync("TestFile3");
+            response.ShouldBe(true);
+
+            var isExist = await _blobContainer.ExistsAsync("TestFile3");
+            isExist.ShouldBe(false);
         }
     }
 }

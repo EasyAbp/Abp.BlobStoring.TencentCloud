@@ -36,9 +36,20 @@ namespace EasyAbp.Abp.BlobStoring.TencentCloud
             await client.UploadObjectAsync(GetContainerName(args), blobName, args.BlobStream);
         }
 
-        public override Task<bool> DeleteAsync(BlobProviderDeleteArgs args)
+        public override async Task<bool> DeleteAsync(BlobProviderDeleteArgs args)
         {
-            throw new NotImplementedException();
+            var blobName = TencentCloudBlobNameCalculator.Calculate(args);
+            var containerName = GetContainerName(args);
+            var client = GetClient(args);
+
+            if (!await BlobExistsAsync(args, blobName))
+            {
+                return false;
+            }
+
+            await client.DeleteObjectAsync(containerName, blobName);
+
+            return true;
         }
 
         public override Task<bool> ExistsAsync(BlobProviderExistsArgs args)

@@ -56,13 +56,21 @@ namespace EasyAbp.Abp.BlobStoring.TencentCloud.Infrastructure
         }
 
         public static async Task<Stream> DownloadObjectAsync(this CosServerWrapObject client,
-            string buckName,
+            string bucketName,
             string objectKey)
         {
-            var result = client.CosXmlServer.GetObject(new GetObjectBytesRequest(buckName, objectKey));
+            var result = client.CosXmlServer.GetObject(new GetObjectBytesRequest(bucketName, objectKey));
             await Task.CompletedTask;
 
             return new MemoryStream(result.content);
+        }
+
+        public static Task DeleteObjectAsync(this CosServerWrapObject client,
+            string bucketName,
+            string objectKey)
+        {
+            client.CosXmlServer.DeleteObject(new DeleteObjectRequest(bucketName, objectKey));
+            return Task.CompletedTask;
         }
     }
 }
