@@ -7,7 +7,7 @@ namespace EasyAbp.Abp.BlobStoring.TencentCloud.Infrastructure
     {
         public static async Task<byte[]> ToBytesAsync(this Stream stream)
         {
-            await using var memoryStream = new MemoryStream();
+            using var memoryStream = new MemoryStream();
             await stream.CopyToAsync(memoryStream);
             return memoryStream.ToArray();
         }
