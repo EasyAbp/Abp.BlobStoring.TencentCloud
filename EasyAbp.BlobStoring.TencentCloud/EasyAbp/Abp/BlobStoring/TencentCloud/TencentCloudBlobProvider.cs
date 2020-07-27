@@ -43,7 +43,7 @@ namespace EasyAbp.Abp.BlobStoring.TencentCloud
 
         public override Task<bool> ExistsAsync(BlobProviderExistsArgs args)
         {
-            throw new NotImplementedException();
+            return BlobExistsAsync(args, TencentCloudBlobNameCalculator.Calculate(args));
         }
 
         public override async Task<Stream> GetOrNullAsync(BlobProviderGetArgs args)

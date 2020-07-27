@@ -27,5 +27,19 @@ namespace EasyAbp.BlobStoring.TencentCloud.Tests
             var fileStream = await _blobContainer.GetAsync("TestFile1");
             fileStream.Length.ShouldBe(2);
         }
+
+        [Fact]
+        public async Task Should_Return_True()
+        {
+            // Arrange
+            var bytes = new byte[] {0x01, 0x02};
+
+            // Act
+            await _blobContainer.SaveAsync("TestFile2", bytes);
+
+            // Assert
+            var isExists = await _blobContainer.ExistsAsync("TestFile2");
+            isExists.ShouldBe(true);
+        }
     }
 }
