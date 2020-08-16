@@ -4,7 +4,7 @@ using COSXML.CosException;
 using COSXML.Model.Bucket;
 using COSXML.Model.Object;
 
-namespace EasyAbp.Abp.BlobStoring.TencentCloud.Infrastructure
+namespace EasyAbp.BlobStoring.TencentCloud.Infrastructure
 {
     public static class CosServerWarpObjectExtensions
     {

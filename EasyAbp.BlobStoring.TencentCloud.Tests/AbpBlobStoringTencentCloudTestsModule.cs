@@ -1,8 +1,7 @@
 ﻿using System;
 using COSXML.Model.Bucket;
 using COSXML.Model.Object;
-using EasyAbp.Abp.BlobStoring.TencentCloud;
-using EasyAbp.Abp.BlobStoring.TencentCloud.Infrastructure;
+using EasyAbp.BlobStoring.TencentCloud.Infrastructure;
 using Volo.Abp;
 using Volo.Abp.Autofac;
 using Volo.Abp.BlobStoring;

@@ -1,6 +1,6 @@
 using Volo.Abp.BlobStoring;
 
-namespace EasyAbp.Abp.BlobStoring.TencentCloud
+namespace EasyAbp.BlobStoring.TencentCloud
 {
     public class TencentCloudBlobProviderConfiguration
     {

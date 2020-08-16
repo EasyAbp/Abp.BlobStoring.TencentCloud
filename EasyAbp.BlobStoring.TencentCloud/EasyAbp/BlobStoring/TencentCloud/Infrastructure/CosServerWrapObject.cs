@@ -2,7 +2,7 @@ using System;
 using COSXML;
 using COSXML.Auth;
 
-namespace EasyAbp.Abp.BlobStoring.TencentCloud.Infrastructure
+namespace EasyAbp.BlobStoring.TencentCloud.Infrastructure
 {
     public class CosServerWrapObject
     {
