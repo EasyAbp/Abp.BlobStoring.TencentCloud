@@ -21,14 +21,14 @@
 
     <ItemGroup>
         <PackageReference Include="Tencent.QCloud.Cos.Sdk" Version="5.4.11" />
-        <PackageReference Include="Volo.Abp.BlobStoring" Version="3.0.4" />
+        <PackageReference Include="Volo.Abp.BlobStoring" Version="3.0.5" />
     </ItemGroup>
     
     <ItemGroup>
         <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3" PrivateAssets="All" />
 
         <PackageReference Include="ConfigureAwait.Fody" Version="3.3.1" PrivateAssets="All" />
-        <PackageReference Include="Fody" Version="6.2.0">
+        <PackageReference Include="Fody" Version="6.2.4">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
         </PackageReference>
