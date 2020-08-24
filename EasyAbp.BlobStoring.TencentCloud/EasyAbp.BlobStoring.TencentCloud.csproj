@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp2.0</TargetFramework>
-        <Description>Abp vNext Blob 的腾讯云实现。</Description>
+        <Description>TencentCloud implementation of Abp BLOB Storing.</Description>
 
         <PackageIconUrl>https://avatars3.githubusercontent.com/u/58311641?s=128</PackageIconUrl>
         <PackageProjectUrl>https://github.com/EasyAbp/Abp.BlobStoring.TencentCloud</PackageProjectUrl>
