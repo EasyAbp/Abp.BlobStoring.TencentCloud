@@ -1,11 +1,11 @@
 using System;
 using System.IO;
 using System.Threading.Tasks;
-using EasyAbp.BlobStoring.TencentCloud.Infrastructure;
+using EasyAbp.Abp.BlobStoring.TencentCloud.Infrastructure;
 using Volo.Abp.BlobStoring;
 using Volo.Abp.DependencyInjection;
 
-namespace EasyAbp.BlobStoring.TencentCloud
+namespace EasyAbp.Abp.BlobStoring.TencentCloud
 {
     public class TencentCloudBlobProvider : BlobProviderBase, ITransientDependency
     {

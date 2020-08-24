@@ -1,4 +1,4 @@
-namespace EasyAbp.BlobStoring.TencentCloud
+namespace EasyAbp.Abp.BlobStoring.TencentCloud
 {
     public static class TencentCloudBlobProviderConfigurationNames
     {

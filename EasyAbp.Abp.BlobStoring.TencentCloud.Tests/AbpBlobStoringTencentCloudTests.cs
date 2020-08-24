@@ -3,7 +3,7 @@ using Shouldly;
 using Volo.Abp.BlobStoring;
 using Xunit;
 
-namespace EasyAbp.BlobStoring.TencentCloud.Tests
+namespace EasyAbp.Abp.BlobStoring.TencentCloud.Tests
 {
     public class AbpBlobStoringTencentCloudTests : AbpBlobStoringTencentCloudTestsBase
     {
