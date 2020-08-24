@@ -4,7 +4,7 @@
 [![NuGet Download](https://img.shields.io/nuget/dt/EasyAbp.Abp.BlobStoring.TencentCloud.svg?style=flat-square)](https://www.nuget.org/packages/EasyAbp.Abp.BlobStoring.TencentCloud)
 [![GitHub stars](https://img.shields.io/github/stars/EasyAbp/Abp.BlobStoring.TencentCloud?style=social)](https://www.github.com/EasyAbp/Abp.BlobStoring.TencentCloud)
 
-Tencent Cloud implementation of ABP BLOB Provider.
+TencentCloud implementation of Abp BLOB Storing.
 
 ## Installation
 
