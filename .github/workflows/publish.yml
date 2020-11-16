@@ -14,7 +14,7 @@ jobs:
         id: commonProps
         uses: juliangruber/read-file-action@v1
         with:
-          path: ./EasyAbp.BlobStoring.TencentCloud/EasyAbp.BlobStoring.TencentCloud.csproj
+          path: ./EasyAbp.Abp.BlobStoring.TencentCloud/EasyAbp.Abp.BlobStoring.TencentCloud.csproj
 
       - name: get version
         id: getVersion

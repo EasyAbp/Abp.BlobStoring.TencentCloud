@@ -2,7 +2,7 @@ using System.Text.RegularExpressions;
 using Volo.Abp.BlobStoring;
 using Volo.Abp.DependencyInjection;
 
-namespace EasyAbp.BlobStoring.TencentCloud
+namespace EasyAbp.Abp.BlobStoring.TencentCloud
 {
     public class TencentCloudBlobNamingNormalizer : IBlobNamingNormalizer, ITransientDependency
     {

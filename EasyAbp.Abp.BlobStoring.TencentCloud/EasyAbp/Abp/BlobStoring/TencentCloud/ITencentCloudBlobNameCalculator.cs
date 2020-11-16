@@ -1,6 +1,6 @@
 using Volo.Abp.BlobStoring;
 
-namespace EasyAbp.BlobStoring.TencentCloud
+namespace EasyAbp.Abp.BlobStoring.TencentCloud
 {
     public interface ITencentCloudBlobNameCalculator
     {

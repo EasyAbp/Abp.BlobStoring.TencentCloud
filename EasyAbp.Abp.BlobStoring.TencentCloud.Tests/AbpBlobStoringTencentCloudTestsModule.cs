@@ -1,13 +1,13 @@
 ﻿using System;
 using COSXML.Model.Bucket;
 using COSXML.Model.Object;
-using EasyAbp.BlobStoring.TencentCloud.Infrastructure;
+using EasyAbp.Abp.BlobStoring.TencentCloud.Infrastructure;
 using Volo.Abp;
 using Volo.Abp.Autofac;
 using Volo.Abp.BlobStoring;
 using Volo.Abp.Modularity;
 
-namespace EasyAbp.BlobStoring.TencentCloud.Tests
+namespace EasyAbp.Abp.BlobStoring.TencentCloud.Tests
 {
     [DependsOn(typeof(AbpBlobStoringTencentCloudModule),
         typeof(AbpAutofacModule),

@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyAbp.BlobStoring.TencentCloud", "EasyAbp.BlobStoring.TencentCloud\EasyAbp.BlobStoring.TencentCloud.csproj", "{85F55155-03C1-427F-A2E5-2902850CAB9A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyAbp.Abp.BlobStoring.TencentCloud", "EasyAbp.Abp.BlobStoring.TencentCloud\EasyAbp.Abp.BlobStoring.TencentCloud.csproj", "{85F55155-03C1-427F-A2E5-2902850CAB9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyAbp.BlobStoring.TencentCloud.Tests", "EasyAbp.BlobStoring.TencentCloud.Tests\EasyAbp.BlobStoring.TencentCloud.Tests.csproj", "{BFBE3EBC-33ED-4617-9404-294BA1A4D1E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyAbp.Abp.BlobStoring.TencentCloud.Tests", "EasyAbp.Abp.BlobStoring.TencentCloud.Tests\EasyAbp.Abp.BlobStoring.TencentCloud.Tests.csproj", "{BFBE3EBC-33ED-4617-9404-294BA1A4D1E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

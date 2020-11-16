@@ -1,7 +1,7 @@
 ﻿using Volo.Abp;
 using Volo.Abp.Testing;
 
-namespace EasyAbp.BlobStoring.TencentCloud.Tests
+namespace EasyAbp.Abp.BlobStoring.TencentCloud.Tests
 {
     public class AbpBlobStoringTencentCloudTestsBase : AbpIntegratedTest<AbpBlobStoringTencentCloudTestsModule>
     {

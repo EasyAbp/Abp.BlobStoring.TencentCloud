@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
 
-namespace EasyAbp.BlobStoring.TencentCloud.Infrastructure
+namespace EasyAbp.Abp.BlobStoring.TencentCloud.Infrastructure
 {
     public static class BinaryExtensions
     {
