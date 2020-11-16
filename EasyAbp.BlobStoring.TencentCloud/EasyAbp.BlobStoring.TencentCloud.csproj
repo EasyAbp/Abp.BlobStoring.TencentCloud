@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp2.0</TargetFramework>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
         <Description>Abp vNext Blob 的腾讯云实现。</Description>
 
         <PackageIconUrl>https://avatars3.githubusercontent.com/u/58311641?s=128</PackageIconUrl>
@@ -20,15 +20,15 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Tencent.QCloud.Cos.Sdk" Version="5.4.13" />
-        <PackageReference Include="Volo.Abp.BlobStoring" Version="3.0.5" />
+        <PackageReference Include="Tencent.QCloud.Cos.Sdk" Version="5.4.15" />
+        <PackageReference Include="Volo.Abp.BlobStoring" Version="3.3.1" />
     </ItemGroup>
     
     <ItemGroup>
         <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3" PrivateAssets="All" />
 
         <PackageReference Include="ConfigureAwait.Fody" Version="3.3.1" PrivateAssets="All" />
-        <PackageReference Include="Fody" Version="6.2.4">
+        <PackageReference Include="Fody" Version="6.3.0">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
         </PackageReference>
