@@ -1,8 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyAbp.Abp.BlobStoring.TencentCloud", "EasyAbp.Abp.BlobStoring.TencentCloud\EasyAbp.Abp.BlobStoring.TencentCloud.csproj", "{85F55155-03C1-427F-A2E5-2902850CAB9A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{24A6C981-6E85-47BF-9AD5-99E740120BE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyAbp.Abp.BlobStoring.TencentCloud.Tests", "EasyAbp.Abp.BlobStoring.TencentCloud.Tests\EasyAbp.Abp.BlobStoring.TencentCloud.Tests.csproj", "{BFBE3EBC-33ED-4617-9404-294BA1A4D1E0}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{DB90218C-B735-4CAA-89CE-3B24595CBA6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyAbp.Abp.BlobStoring.TencentCloud", "src\EasyAbp.Abp.BlobStoring.TencentCloud\EasyAbp.Abp.BlobStoring.TencentCloud.csproj", "{7BB10144-E6A1-4880-9080-7CAF604C5DFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyAbp.Abp.BlobStoring.TencentCloud.Tests", "tests\EasyAbp.Abp.BlobStoring.TencentCloud.Tests\EasyAbp.Abp.BlobStoring.TencentCloud.Tests.csproj", "{A0886C39-7924-4364-B75E-6E5215536325}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,13 +14,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{85F55155-03C1-427F-A2E5-2902850CAB9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{85F55155-03C1-427F-A2E5-2902850CAB9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{85F55155-03C1-427F-A2E5-2902850CAB9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{85F55155-03C1-427F-A2E5-2902850CAB9A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BFBE3EBC-33ED-4617-9404-294BA1A4D1E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BFBE3EBC-33ED-4617-9404-294BA1A4D1E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BFBE3EBC-33ED-4617-9404-294BA1A4D1E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BFBE3EBC-33ED-4617-9404-294BA1A4D1E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BB10144-E6A1-4880-9080-7CAF604C5DFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BB10144-E6A1-4880-9080-7CAF604C5DFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0886C39-7924-4364-B75E-6E5215536325}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0886C39-7924-4364-B75E-6E5215536325}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7BB10144-E6A1-4880-9080-7CAF604C5DFA} = {24A6C981-6E85-47BF-9AD5-99E740120BE3}
+		{A0886C39-7924-4364-B75E-6E5215536325} = {DB90218C-B735-4CAA-89CE-3B24595CBA6B}
 	EndGlobalSection
 EndGlobal

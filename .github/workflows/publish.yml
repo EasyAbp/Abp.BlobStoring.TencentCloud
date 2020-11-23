@@ -11,11 +11,11 @@ jobs:
       - uses: actions/checkout@v2
       - uses: NuGet/setup-nuget@v1.0.5
 
-      - name: read project file
+      - name: read common.props
         id: commonProps
         uses: juliangruber/read-file-action@v1
         with:
-          path: ./EasyAbp.Abp.BlobStoring.TencentCloud/EasyAbp.Abp.BlobStoring.TencentCloud.csproj
+          path: ./common.props
 
       - name: get version
         id: getVersion
@@ -39,7 +39,6 @@ jobs:
           del *.HttpApi.Client.ConsoleTestApp*
           del *.Host.Shared*
           dir -name
-
       - name: dotnet nuget push to GitHub
         uses: tanaka-takayoshi/nuget-publish-to-github-packages-action@v2.1
         with:

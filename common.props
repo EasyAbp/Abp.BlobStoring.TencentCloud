@@ -1,7 +1,5 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+<Project>
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
         <Description>TencentCloud implementation of Abp BLOB Storing.</Description>
 
         <PackageIconUrl>https://avatars3.githubusercontent.com/u/58311641?s=128</PackageIconUrl>
@@ -16,14 +14,8 @@
         <NoWarn>$(NoWarn);CS1591</NoWarn>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Authors>EasyAbp Team</Authors>
-        <RootNamespace />
     </PropertyGroup>
 
-    <ItemGroup>
-        <PackageReference Include="Tencent.QCloud.Cos.Sdk" Version="5.4.15" />
-        <PackageReference Include="Volo.Abp.BlobStoring" Version="3.3.1" />
-    </ItemGroup>
-    
     <ItemGroup>
         <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3" PrivateAssets="All" />
 
@@ -33,9 +25,4 @@
             <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
         </PackageReference>
     </ItemGroup>
-    
-    <ItemGroup>
-      <Folder Include="EasyAbp\Abp" />
-    </ItemGroup>
-
 </Project>

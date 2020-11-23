@@ -25,6 +25,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\src\EasyAbp.Abp.BlobStoring.TencentCloud\EasyAbp.Abp.BlobStoring.TencentCloud.csproj" />
       <ProjectReference Include="..\EasyAbp.Abp.BlobStoring.TencentCloud\EasyAbp.Abp.BlobStoring.TencentCloud.csproj" />
     </ItemGroup>
 
