@@ -10,16 +10,16 @@
         <Company>EasyAbp</Company>
 
         <LangVersion>latest</LangVersion>
-        <Version>1.0.1</Version>
+        <Version>1.1.0</Version>
         <NoWarn>$(NoWarn);CS1591</NoWarn>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Authors>EasyAbp Team</Authors>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3" PrivateAssets="All" />
+        <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3" PrivateAssets="All"/>
 
-        <PackageReference Include="ConfigureAwait.Fody" Version="3.3.1" PrivateAssets="All" />
+        <PackageReference Include="ConfigureAwait.Fody" Version="3.3.1" PrivateAssets="All"/>
         <PackageReference Include="Fody" Version="6.3.0">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
