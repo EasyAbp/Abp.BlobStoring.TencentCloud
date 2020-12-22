@@ -2,8 +2,7 @@ name: publish to nuget
 on:
   push:
     branches:
-      - master
-      - main
+      - master # Default release branch
 jobs:
   publish:
     runs-on: windows-latest
@@ -25,6 +24,9 @@ jobs:
           regex_flags: 'gim'
           search_string: '${{ steps.commonProps.outputs.content }}'
 
+      - name: dotnet restore
+        run: dotnet restore -s "https://api.nuget.org/v3/index.json"
+
       - name: dotnet build
         run: dotnet build -c Release
 
@@ -39,6 +41,7 @@ jobs:
           del *.HttpApi.Client.ConsoleTestApp*
           del *.Host.Shared*
           dir -name
+
       - name: dotnet nuget push to GitHub
         uses: tanaka-takayoshi/nuget-publish-to-github-packages-action@v2.1
         with:
