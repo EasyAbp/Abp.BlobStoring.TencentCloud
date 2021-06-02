@@ -8,12 +8,13 @@ namespace EasyAbp.Abp.BlobStoring.TencentCloud.Infrastructure
 {
     public static class CosServerWarpObjectExtensions
     {
-        public static bool CheckBucketIsExist(this CosServerWrapObject client, string bucketName)
+        public static async Task<bool> CheckBucketIsExistAsync(this CosServerWrapObject client, string bucketName)
         {
             try
             {
-                client.CosXmlServer.HeadBucket(new HeadBucketRequest(bucketName));
-                return true;
+                var result = await client.CosXmlServer.ExecuteAsync<HeadBucketResult>(new HeadBucketRequest(bucketName));
+                
+                return result.IsSuccessful();
             }
             catch (CosServerException exception)
             {
@@ -26,12 +27,14 @@ namespace EasyAbp.Abp.BlobStoring.TencentCloud.Infrastructure
             }
         }
 
-        public static bool CheckObjectIsExist(this CosServerWrapObject client, string bucketName, string objectKey)
+        public static async Task<bool> CheckObjectIsExistAsync(this CosServerWrapObject client, string bucketName, string objectKey)
         {
             try
             {
-                client.CosXmlServer.HeadObject(new HeadObjectRequest(bucketName, objectKey));
-                return true;
+                var result =
+                    await client.CosXmlServer.ExecuteAsync<HeadObjectResult>(new HeadObjectRequest(bucketName, objectKey));
+                
+                return result.IsSuccessful();
             }
             catch (CosServerException exception)
             {
@@ -44,33 +47,36 @@ namespace EasyAbp.Abp.BlobStoring.TencentCloud.Infrastructure
             }
         }
 
-        public static void CreateBucket(this CosServerWrapObject client, string bucketName)
-            => client.CosXmlServer.PutBucket(new PutBucketRequest(bucketName));
-
+        public static async Task CreateBucketAsync(this CosServerWrapObject client, string bucketName)
+        {
+            await client.CosXmlServer.ExecuteAsync<PutBucketResult>(new PutBucketRequest(bucketName));
+        }
+        
         public static async Task UploadObjectAsync(this CosServerWrapObject client,
             string bucketName,
             string objectKey,
             Stream data)
         {
-            client.CosXmlServer.PutObject(new PutObjectRequest(bucketName, objectKey, await data.ToBytesAsync()));
+            await client.CosXmlServer.ExecuteAsync<PutObjectResult>(new PutObjectRequest(bucketName, objectKey,
+                await data.ToBytesAsync()));
         }
 
         public static async Task<Stream> DownloadObjectAsync(this CosServerWrapObject client,
             string bucketName,
             string objectKey)
         {
-            var result = client.CosXmlServer.GetObject(new GetObjectBytesRequest(bucketName, objectKey));
-            await Task.CompletedTask;
-
+            var result =
+                await client.CosXmlServer.ExecuteAsync<GetObjectBytesResult>(
+                    new GetObjectBytesRequest(bucketName, objectKey));
+            
             return new MemoryStream(result.content);
         }
 
-        public static Task DeleteObjectAsync(this CosServerWrapObject client,
+        public static async Task DeleteObjectAsync(this CosServerWrapObject client,
             string bucketName,
             string objectKey)
         {
-            client.CosXmlServer.DeleteObject(new DeleteObjectRequest(bucketName, objectKey));
-            return Task.CompletedTask;
+            await client.CosXmlServer.ExecuteAsync<DeleteObjectResult>(new DeleteObjectRequest(bucketName, objectKey));
         }
     }
 }
