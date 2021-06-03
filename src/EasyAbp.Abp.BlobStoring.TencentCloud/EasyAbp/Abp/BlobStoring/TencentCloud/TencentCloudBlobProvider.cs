@@ -63,7 +63,7 @@ namespace EasyAbp.Abp.BlobStoring.TencentCloud
             var containerName = GetContainerName(args);
             var client = GetClient(args);
 
-            if (!client.CheckObjectIsExist(containerName, blobName))
+            if (!await client.CheckObjectIsExistAsync(containerName, blobName))
             {
                 return null;
             }
@@ -77,26 +77,24 @@ namespace EasyAbp.Abp.BlobStoring.TencentCloud
             return new CosServerWrapObject(configuration);
         }
 
-        protected virtual Task<bool> BlobExistsAsync(BlobProviderArgs args, string blobName)
+        protected virtual async Task<bool> BlobExistsAsync(BlobProviderArgs args, string blobName)
         {
             var client = GetClient(args);
             var containerName = GetContainerName(args);
 
-            return Task.FromResult(client.CheckBucketIsExist(containerName) &&
-                                   client.CheckObjectIsExist(containerName, blobName));
+            return await client.CheckBucketIsExistAsync(containerName) &&
+                   await client.CheckObjectIsExistAsync(containerName, blobName);
         }
 
-        protected virtual Task CreateContainerIfNotExistsAsync(BlobProviderArgs args)
+        protected virtual async Task CreateContainerIfNotExistsAsync(BlobProviderArgs args)
         {
             var client = GetClient(args);
             var containerName = GetContainerName(args);
 
-            if (!client.CheckBucketIsExist(containerName))
+            if (!await client.CheckBucketIsExistAsync(containerName))
             {
-                client.CreateBucket(containerName);
+                await client.CreateBucketAsync(containerName);
             }
-
-            return Task.CompletedTask;
         }
 
         protected virtual string GetContainerName(BlobProviderArgs args)
