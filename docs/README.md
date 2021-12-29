@@ -4,6 +4,7 @@
 [![NuGet](https://img.shields.io/nuget/v/EasyAbp.Abp.BlobStoring.TencentCloud.svg?style=flat-square)](https://www.nuget.org/packages/EasyAbp.Abp.BlobStoring.TencentCloud)
 [![NuGet Download](https://img.shields.io/nuget/dt/EasyAbp.Abp.BlobStoring.TencentCloud.svg?style=flat-square)](https://www.nuget.org/packages/EasyAbp.Abp.BlobStoring.TencentCloud)
 [![GitHub stars](https://img.shields.io/github/stars/EasyAbp/Abp.BlobStoring.TencentCloud?style=social)](https://www.github.com/EasyAbp/Abp.BlobStoring.TencentCloud)
+[![Discord online](https://badgen.net/discord/online-members/S6QaezrCRq?label=Discord)](https://discord.gg/S6QaezrCRq)
 
 TencentCloud implementation of Abp BLOB Storing.
 
