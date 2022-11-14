@@ -35,7 +35,7 @@ jobs:
         run: dotnet build -c Release
 
       - name: dotnet test
-        run: dotnet test --no-restore --no-build
+        run: dotnet test --no-restore --no-build -c Release
 
       - name: dotnet pack
         run: dotnet pack -c Release --no-build -o dest
