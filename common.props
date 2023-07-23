@@ -10,7 +10,7 @@
         <Company>EasyAbp</Company>
 
         <LangVersion>latest</LangVersion>
-        <Version>1.6.0</Version>
+        <Version>1.7.0</Version>
         <NoWarn>$(NoWarn);CS1591</NoWarn>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Authors>EasyAbp Team</Authors>
