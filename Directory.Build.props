@@ -1,7 +1,8 @@
 <Project>
   <PropertyGroup>
 
-    <AbpVersion>8.1.0</AbpVersion>
+    <AbpVersion>8.2.0</AbpVersion>
+    <TencentQCloudCosSdk>5.4.39</TencentQCloudCosSdk>
 
   </PropertyGroup>
 </Project>
