@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-    <AbpVersion>9.2.1</AbpVersion>
-    <TencentQCloudCosSdk>5.4.48</TencentQCloudCosSdk>
+    <AbpVersion>9.3.3</AbpVersion>
+    <TencentQCloudCosSdk>5.4.49</TencentQCloudCosSdk>
   </PropertyGroup>
 </Project>
